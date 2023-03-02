@@ -1,0 +1,201 @@
+<!-- NAME: Theo Heard
+     PROG PURPOSE: This program creates a webpage about chapter 2 from the invitation
+     to comp sci text book
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapter 2</title>
+        <style>
+            body
+            {
+                
+                background-color: beige;
+                color: #06090c;
+                font-family: 'Times New Roman', Times, serif;
+                width: auto;
+            }
+            table
+            {
+                border: 1px solid black;
+                background-color: cadetblue;
+                width: 800px;
+                margin: auto;
+            }
+            td
+            {
+                border: 1px solid black;
+                padding-left: 5px;
+            }
+            a
+            {
+                text-decoration: none;
+            }
+            a:link
+            {
+                color: #ffffff;
+            }
+            a:visited
+            {
+                color: #ffff00;
+            }
+            a:hover
+            {
+                color: #d457ab;
+            }
+            a:active
+            {
+                color: #20bbbb;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr style="background-color: #683e8a;">
+                <td><a href="index.html"> Home </a></td>
+                <td><a href="https://www.pvcc.edu"> PVCC </a></td>
+                <td><a href="https://www.w3schools.com/htm/"> W3 Schools </a></td>
+                <td><a href="contactus.html"> Contact Us </a></td>
+            </tr>
+            <tr><td colspan="4">
+                <h1>Chapter 2: Algorithm Discovery and Design</h1>
+                <h1>Chapter 3: The Efficiency of Algorithms</h1>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Chapter 2: Algorithms</h2>
+                <ol>
+                    <li>Explain why natural language is not an effective tool for describing algorithms.</li>
+                    <ul><li>Natural language is not an effective tool for algorithms because it is too verbose, making 
+                        it difficult for the reader to find specific sections.
+                    </li></ul>
+                    <li>Problem 1: </li>
+                    <ul>
+                        <li>A student has three grades; the final grade is the average of the three.
+                            List the algorithmic steps to find the final grade.
+                        </li>
+                        <ol>
+                            <li>Get the values for grade 1, grade 2, grade 3</li>
+                            <li>Set the value of final grade to ((grade 1 + grade 2 + grade 3) / 3)</li>
+                            <li>Print the value of final grade</li>
+                            <li>Stop</li>
+                        </ol>
+                    </ul>
+                    <li>Problem 2: </li>
+                    <ul>
+                        <li>A car owner recorded the car's previous car mileage, and the number of gallons
+                            of gas the owner filled their tank with. List the algorithmic steps to find the 
+                            car's mpg.
+                        </li>
+                        <ol>
+                            <li>Get the values for starting mileage, ending mileage, gallons filled, ending gallons</li>
+                            <li>Set the value of distance driven (ending mileage - starting mileage)</li>
+                            <li>Set the value of gallons used to (gallons filled - ending gallons)</li>
+                            <li>Set the value of mpg to (distance driven + gallons used)</li>
+                            <li>Print the value of mpg</li>
+                            <li>Stop</li>
+                        </ol>
+                    </ul>
+                </ol>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Chapter 2: Briefly define:</h2>
+                <ol>
+                    <li>natural language</li>
+                    <ul><li>Natural language is a human spoken/ written language (English, Spanish, French, etc...)</li></ul>
+                    <li>psuedocode</li>
+                    <ul><li>English-language constructs designed to resemble statements in a programming language.</li></ul>
+                    <li>sequential operation (straight-line algorithm)</li>
+                    <ul><li>An algorithm that takes a series of operations in a specific order of steps. Using some "input" do some "computation" to get some "output"</li></ul>
+                    <li>input</li>
+                    <ul><li>Operation that provides data to computing agent from outside world</li></ul>
+                    <li>output</li>
+                    <ul><li>Send results from computing agent to outside world</li></ul>
+                    <li>conditional statement</li>
+                    <ul><li>Statement that requires some question to be answered before executing some computation.</li></ul>
+                    <li>boolean condition</li>
+                    <ul><li>A condition that returns either "true" or "false"</li></ul>
+                    <li>algorithmic discovery process</li>
+                    <ul><li>The steps taken to find a solution to a given problem</li></ul>
+                </ol>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Chapter 3: Briefly describe or define:</h2>
+                <ol>
+                    <li>why algorithms should be correct</li>
+                    <ul><li>It offers no value if the result that the algorithm returns is incorrect.
+                        If you have a nice car, but it doesn't start, it has no use.
+                    </li></ul>
+                    <li>why algorithms should be efficient</li>
+                    <ul><li>Algorithms are intended to be used to solve real world problems. Therefore, an 
+                        inefficient algorithm may waste time or storage space. 
+                    </li></ul>
+                    <li>program maintenance</li>
+                    <ul><li>Fixing errors uncovered through use, and keeping up with developing requirements.</li></ul>
+                    <li>importance of algorithm: ease of understanding</li>
+                    <ul><li>The algorithm being used should be easy to understand to make maintenance as easy 
+                        as possible.
+                    </li></ul>
+                    <li>algorithmic elegance</li>
+                    <ul><li>The algorithmic equivalent to style.</li></ul>
+                    <li>sequential search algorithm</li>
+                    <ul><li>Algorithm used to step through a list or directory to find a specific element.</li></ul>
+                    <li>order of magnitude</li>
+                    <ul><li>The number of times an algorithm must iterate to achieve the correct answer.</li></ul>
+                    <li>selection sort</li>
+                    <ul><li>Algorithm used to sort a list of elements from back to front</li></ul>
+                    <li>flop (floating point operation)</li>
+                    <ul><li>Used to measure the performance of a computer.</li></ul>
+                    <li>teraflop</li>
+                    <ul><li>1 teraflop = 1 trillion flops</li></ul>
+                    <li>petaflop</li>
+                    <ul><li>1 petaflop = 1 quadrillion flops</li></ul>
+                    <li>parallel processor</li>
+                    <ul><li>utilizing 2 CPUs to handle seperate parts of an overall task</li></ul>
+                    <li>data cleanup problem</li>
+                    <ul><li>Dealing with input data that is not valid to the data we are attempting to collect</li></ul>
+                    <li>binary search algorithm</li>
+                    <ul><li>Used to search a sorted list from the middle rather than the start or end</li></ul>
+                    <li>pattern matching</li>
+                    <ul><li>Finds all occurences of a pattern.</li></ul>
+                </ol>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Karl Friedrich Gauss</h2>
+                <ol>
+                    <li>Give a brief overview of Karl Friedrich Gauss' mathematics abilities 
+                        and scientific achievements.
+                    </li>
+                    <ul>
+                        <li>Regarded as one of the greatest mathematicians of all time for contributions to 
+                        number theory, geometry, probability theory, geodesy, panetary astronomy and more.
+                        </li>
+                        <li>Won the Copley Medal for inventions and mathematical research in magnetism.</li>
+                    </ul>
+                    <li>Describe Karl Friedrich Gauss' algorithm for adding up the numbers from 1-100</li>
+                    <ul><li>Numbers from 1 to 100 can be grouped into 50 pairs: 1 + 100 = 101. This means 
+                        the sum is equal to 50 * 101.
+                    </li></ul>
+                    <li>What are gaussian optics?</li>
+                    <ul><li>A framework to descibe optical phenomena based on geometric optics and 
+                        the paraxial approximation.
+                    </li></ul>
+                    <li>What is a "gaussian blur" and how is it used in digital image editing?</li>
+                    <ul><li>Rge application of a mathematical function to blur an image.</li></ul>
+                </ol>
+                
+                
+            </td></tr>
+            <tr><td colspan="4">
+                <img src="gaussMe.png" alt="before and after pic of me with gauss blur." width="800">
+                <img src="gaussDoor.png" alt="before and after pic of a door with gauss blur." width="800">
+            </td></tr>
+        </table>
+        <h4>Source Links</h4>
+        <p>
+            <a href="https://www.britannica.com/biography/Carl-Friedrich-Gauss" style="color: #06090c;">Britannica</a><br>
+            <a href="https://www.rp-photonics.com/gaussian_optics.html"style="color: #06090c;">RP-Photonics</a><br>
+            <a href="https://www.adobe.com/creativecloud/photography/discover/gaussian-blur.html"style="color: #06090c;">Adobe</a>
+        </p>
+    </body>
+</html>
