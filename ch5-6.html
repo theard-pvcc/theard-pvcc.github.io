@@ -1,0 +1,247 @@
+<!-- NAME: Theo Heard
+     PROG PURPOSE: This program creates a webpage about chapters 5 and 6 from the invitation
+     to comp sci text book
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapters 5 & 6</title>
+        <style>
+            body
+            {
+                
+                background-color: beige;
+                color: #06090c;
+                font-family: 'Times New Roman', Times, serif;
+                width: auto;
+            }
+            table
+            {
+                border: 1px solid black;
+                background-color: cadetblue;
+                width: 800px;
+                margin: auto;
+            }
+            td
+            {
+                border: 1px solid black;
+                padding-left: 5px;
+            }
+            #book th
+            {
+                padding: 3px;
+                background-color: antiquewhite;
+            }
+            #book tr:nth-child(even)
+            {
+                background-color: #683e8a;
+            }
+            #book tr
+            {
+                text-align: center;
+                padding: 2px;
+            }
+            a
+            {
+                text-decoration: none;
+            }
+            a:link
+            {
+                color: #ffffff;
+            }
+            a:visited
+            {
+                color: #ffff00;
+            }
+            a:hover
+            {
+                color: #d457ab;
+            }
+            a:active
+            {
+                color: #20bbbb;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr style="background-color: #683e8a;">
+                <td><a href="index.html"> Home </a></td>
+                <td><a href="https://www.pvcc.edu"> PVCC </a></td>
+                <td><a href="https://www.w3schools.com/htm/"> W3 Schools </a></td>
+                <td><a href="contactus.html"> Contact Us </a></td>
+            </tr>
+            <tr><td colspan="4">
+                <h1>Chapter 5: Computer Systems Organization</h1>
+                <h1>Student: Theo Heard</h1>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Von Neumann computer architecture, 4 major subsystems:</h2>
+                <ol>
+                    <li>Memory</li>
+                    <li>Input/output</li>
+                    <li>ALU</li>
+                    <li>Control unit</li>
+                </ol>
+                <h2>Von Neumann computer architecture, 3 characteristics:</h2>
+                <ol>
+                    <li>Four major subsystems</li>
+                    <li>Stored Program</li>
+                    <li>Sequential execution of instructions</li>
+                </ol>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Computer Architecture Terms</h2>
+                <ol>
+                    <li>RAM</li>
+                    <ul><li>Random Access Memory</li></ul>
+                    <ul><li>Memory is divided into fixed-size units called cells which are each associated with an address</li></ul>
+                    <ul><li>All accesses to memory are to a specified address</li></ul>
+                    <ul><li>The time it takes to fetch or store the contents of a single cell is the same for all cells in memory</li></ul>
+                    <li>cache</li>
+                    <ul><li>Smaller high speed memory unit between processor and main memory</li></ul>
+                    <li>Principle of locality: The high likelihood that when a program fetches a piece of data or an instruction:</li>
+                    <ol>
+                        <li>It will access that same instruction or piece of data in the very near future.</li>
+                        <li>It will soon access the instructions or data that are located near that piece of data, where "near"
+                            means an address whose numerical value is close to this one.
+                        </li>
+                    </ol>
+                    <li>ROM</li>
+                    <ul><li>Read-only memory- information has been prerecorded during manufacture, and can't be modified or removed</li></ul>
+                    <li>memory cell size</li>
+                    <ul><li>Number of bits per cell</li></ul>
+                    <li>memory cell address</li>
+                    <ul><li>Unique identifier of a cell. Unsigned integers 0, 1, 2, ..., MAX</li></ul>
+                    <li>maximum memory size</li>
+                    <ul><li>The value 2^N</li></ul>
+                    <li>register</li>
+                    <ul><li>Special high-speed storage cell that holds the operands of an arithmetic operation and its results.</li></ul>
+                    <li>fetch</li>
+                    <ul><li>Get a copy of the contents of the memory cell with a specified address and return those contents 
+                        as the result of the operation.
+                    </li></ul>
+                    <li>store</li>
+                    <ul><li>Store the specified value into the memory cell specified by the address.</li></ul>
+                    <li>memory access time</li>
+                    <ul><li>Time to carry out either a fetch or a store operation</li></ul>
+                    <li>DASD</li>
+                    <ul><li>Direct access storage devices</li></ul>
+                    <li>Arithmetic and Logic Unit (ALU)</li>
+                    <ul><li>Subsytem that performs math and logic operations. Addition, subtraction, and equality comparisons.</li></ul>
+                    <li>Control Unit</li>
+                    <ol>
+                        <li>Fetch from memory the next instruction to be executed</li>
+                        <li>Decode it- determine what is to be done</li>
+                        <li>Execute it by issuing appropriate command to the ALU, memory, or I/O controllers</li>
+                    </ol>
+                </ol>
+            </td></tr>
+            <tr><td colspan="4">
+                <h1>Chapter 6:</h1>
+                <h2>Four things the interface between the computer and the hardware does:</h2>
+                <ol>
+                    <li>Hides the messy details of the underlying hardware from the user</li>
+                    <li>Presents info about what is happening in a way that does not require in-depth knowledge of the internal structure
+                        of the system.
+                    </li>
+                    <li>Allows easy user access to the resources available on this computer.</li>
+                    <li>Prevents accidental or intentional damage to hardware, programs, and data.</li>
+                </ol>
+                <h2>Responsibilites of systems software:</h2>
+                <ol>
+                    <li>Hides the complex and unimportant details of internal structure</li>
+                    <li>Presents important info to the user in a way that is easy to understand</li>
+                    <li>Allows the user to access machine resources in a simple and efficient way</li>
+                    <li>Providese a secure and safe environment in which to operate</li>
+                </ol>
+            </td></tr>
+            <tr><td colspan="4">
+                <h2>Terms:</h2>
+                <ol>
+                    <li>Systems Software</li>
+                    <ul><li>A collection of computer programs that manage the resources of a computer and facilitates access to those resources.</li></ul>
+                    <li>User interface</li>
+                    <ul><li>A graphical user interface that gives users a visual overview and graphical control of the computers services and capabilities.</li></ul>
+                    <li>language services</li>
+                    <ul><li>Programs called assemblers, compilers and interpreters that allo the user to write programs in high-level languages.</li></ul>
+                    <li>memory managers</li>
+                    <ul><li>Programs that allocate mempry space for programs and data and retrieve this memory space when it is no longer needed.</li></ul>
+                    <li>information managers</li>
+                    <ul><li>Handle the organization, storage and retrieval of info on storage devices.</li></ul>
+                    <li>i/o managers</li>
+                    <ul><li>Software packages that allow you to easily and efficiently use the different types of input and output devices that exist on modern computer systems.</li></ul>
+                    <li>scheduler</li>
+                    <ul><li>System program that keeps a list of programs ready to run on the processor. Selects the on that will execute next.</li></ul>
+                    <li>utilities</li>
+                    <ul><li>Collections of library routines that provide a wide range of useful services to a user or to other system routines.</li></ul>
+                    <li>assembly language</li>
+                    <ul><li>Language designed for both computers and people to understand.</li></ul>
+                </ol>
+                <h2>Functions of an Operating System</h2> 
+                <ol>
+                    <li>User interface management</li>
+                    <li>Control of access to the system and to data files</li>
+                    <li>Program scheduling and activation</li>
+                    <li>Efficient resource allocation</li>
+                    <li>Deadlock detection and error detection</li>
+                </ol> 
+            </td></tr>
+        </table>
+        <table id="book">
+            <tr>
+                <th style="width: 150px;">Quantity in Bytes</th>
+                <th style="width: 150px;">Base-10 Value</th>
+                <th>Amount of Textual Information</th>
+            </tr>
+            <tr>
+                <td>1 Byte</td>
+                <td>10^0</td>
+                <td>One character</td>
+            </tr>
+            <tr>
+                <td>1 kilobyte</td>
+                <td>10^3</td>
+                <td>One typed page</td>
+            </tr>
+            <tr>
+                <td>1 megabyte</td>
+                <td>10^6</td>
+                <td>Two or three novels</td>
+            </tr>
+            <tr>
+                <td>1 gigabyte</td>
+                <td>10^9</td>
+                <td>A departmental library or a large personal libary</td>
+            </tr>
+            <tr>
+                <td>1 terabyte</td>
+                <td>10^12</td>
+                <td>The library of a major academic research university</td>
+            </tr>
+            <tr>
+                <td>1 petabyte</td>
+                <td>10^15</td>
+                <td>All printed material in all libraries in North America</td>
+            </tr>
+            <tr>
+                <td>1 exabyte</td>
+                <td>10^18</td>
+                <td>All words ever printed throughout human history</td>
+            </tr>
+            <tr>
+                <td>1 zettabyte</td>
+                <td>10^21</td>
+                <td>As of 2014, the total amount of information stored globally on the World Wide Web</td>
+            </tr>
+            <tr>
+                <td>1 yottabyte</td>
+                <td>10^24</td>
+                <td>According to the Gizmodo, a design and technology blog, storing 1 yottabyte of data on hard drives 
+                    would require 1 million data centers that would fill the stattes of Rhode Island and Delaware
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
