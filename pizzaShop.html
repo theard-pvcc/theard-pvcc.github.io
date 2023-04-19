@@ -103,6 +103,61 @@
                 "\n Sales tax:         " + dollar.format(salesTaxAmt) + 
                 "\nTotal:                 " + dollar.format(total) + howToPay);
         }
+        function subOrder()
+        {
+            // price and tax constants
+            const salesTaxRate = 0.07;
+            const priceHI = 12.99;
+            const priceHC = 10.99;
+            const pricePCS = 12.99;
+            const priceTS = 11.99;
+            const dollar = new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD'});
+            const howToPay = "\n\nCredit, Debit, and Cash accepted.";
+            const line = "\n-------------------------------";
+
+            // data variables
+            var subChoice;
+            var numSubs = 0;
+            var subCost = 0;
+            var discountAmt = 0;
+            var salesTaxAmt = 0;
+            var total = 0;
+            var run = true;
+
+            //ask for user input
+            part1 = "What sub would you like to order?";
+            part2 = "\nEnter: \n\t 1. for Hot Italian Sub \n\t 2. for Ham and Cheese Sub \n\t 3. for Philly Cheese Steak \n\t or 4. for Turkey Sub";
+            subChoice = prompt(part1 + part2);
+            numSubs = prompt("Enter the number of subs you would like to order:");
+
+            //calculate amounts
+            while(run)
+            {
+                run = false;
+                if(subChoice == "1")
+                    subCost = numSubs * priceHI;
+                else if(subChoice == "2")   
+                    subCost = numSubs * priceHC;
+                else if(subChoice == "3")      
+                    subCost = numSubs * pricePCS;
+                else if(subChoice == "4")    
+                        subCost = numSubs * priceTS;
+                else
+                {
+                    pizzaSize = prompt("Please re-enter the pizza size you would like:");
+                    pizzaSize = pizzaSize.toUpperCase();
+                    run = true;
+                }
+            }
+            salesTaxAmt = subCost * salesTaxRate;
+            total = subCost + salesTaxAmt;
+
+            alert("\nGALLO'S PIZZA & SUB SHOP" + line +
+                "\nNumber of subs: " + numSubs +
+                "\nSub Cost:       " + dollar.format(subCost) + 
+                "\n Sales tax:         " + dollar.format(salesTaxAmt) + 
+                "\nTotal:                 " + dollar.format(total) + howToPay);
+        }
     </script>
 </head>
 <body>
@@ -128,6 +183,20 @@
         <tr><td colspan="2">
             <form>
                 <input type="button" value="Click here to order pizza" class="button" onclick="pizzaOrder()" />
+            </form>
+        </td></tr>
+    </table>
+    <table border="1">
+        <tr><th colspan="2"><h3>Subs Price List</h3></th></tr>
+        <tr><td colspan="2"><img src="sub.jpeg"/></td></tr>
+        <tr><td>Hot Italian Sub    </td>  <td>$12.99</td></tr>
+        <tr><td>Ham & Cheese Sub   </td>  <td>$10.99</td></tr>
+        <tr><td>Philly Cheese Steak</td>  <td>$12.99</td></tr>
+        <tr><td>Smoked Turkey Sub  </td>  <td>$11.99</td></tr>
+        <tr><td>Sales tax</td>  <td>7%   </td></tr>
+        <tr><td colspan="2">
+            <form>
+                <input type="button" value="Click here to order subs" class="button" onclick="subOrder()" />
             </form>
         </td></tr>
     </table>
