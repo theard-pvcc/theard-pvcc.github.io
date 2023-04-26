@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Name: Theo Heard
+    Description: This code will find the cost of a beach cottage rental.
+-->
+<head>
+    <title>Summer Breeze Beach Cottage Rentals</title>
+    <script type="text/javascript">
+        function calcTip()
+        {
+            // constants/ variables
+            const dollar = new Intl.NumberFormat('en-US', {style: 'currency', currency:'USD'});
+            var amountIn = 0;
+            var serviceIn = 0;
+            totalTip = 0;
+
+            // retrieve the user data from the form, and assign the data to input variables
+            amountIn = document.getElementById('amount').value;
+            serviceIn = document.getElementById('services').value;
+
+            // if user does not enter a bill amount, display an error message
+            if (amountIn == '')
+            {
+                alert("Please enter the amount of the bill")
+                return;
+            }
+
+            // calculate the total and display result
+            totalTip = amountIn * serviceIn;
+            document.getElementById('total').value = dollar.format(totalTip);
+        }
+    </script>
+    <style>
+        body
+        {
+            background-color: #117cad;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        h2
+        {
+            text-align: center;
+        }
+        table
+        {
+            width: 80%;
+            color: bisque;
+            background-color: #683e8a;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+        td
+        {
+            text-align: right;
+            padding: 10px;
+        }
+        input
+        {
+            width: 150px;
+            font-weight: bold;
+        }
+        input, select
+        {
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr><td colspan="2"><h2>TIP CALCULATOR</h2></td></tr>
+            <tr>
+                <td>Bill Amount:</td>
+                <td><input type="text" id="amount" placeholder="Amount total" /></td>
+            </tr>
+            <tr>
+                <td>How was the service?</td>
+                <td><select id="services">
+                    <option selected disabled hidden>Select</option>
+                    <option value="0.25">25% - Top Notch</option>
+                    <option value="0.20">20% - Excellent</option>
+                    <option value="0.15">15% - Good</option>
+                    <option value="0.10">10% - Fair</option>
+                    <option value="0.05">5% - Bad</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="reset"></td>
+                <td style="text-align: center;">
+                <input type="button" value="Click here to calculate tip" class="button" onclick="calcTip()" />
+                </td>
+            </tr>
+            <tr style="font-weight: bold; font-size: 1.2em; text-align: left;">
+                <td>Tip Amount:</td>
+                <td><input type="text" id="total" placeholder="0" /></td>
+            </tr>
+        </table>
+</div>
+</body>
+</html>
