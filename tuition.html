@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Name: Theo Heard
+    Description: This code will find the cost a students tuition.
+-->
+<head>
+    <title>Tuition Calculator</title>
+    <script type="text/javascript">
+        function calcTui()
+        {
+            // constants/ variables
+            const dollar = new Intl.NumberFormat('en-US', {style: 'currency', currency:'USD'});
+            const tRate = 155;
+            const instFee = 1.75;
+            const studFee = 2.90;
+            var credits = 0;
+            var totalTuition = 0;
+            var totalInstFee = 0;
+            var totalSAFee = 0;
+            var total = 0;
+
+            // retrieve the user data from the form, and assign the data to input variables
+            credits = document.getElementById('credits').value;
+
+            // if user does not enter a bill amount, display an error message
+            if (credits == '')
+            {
+                alert("Please enter the number of credits you're taking")
+                return;
+            }
+
+            // calculate the total and display result
+            totalTuition = credits * tRate;
+            totalInstFee = credits * instFee;
+            totalSAFee = credits * studFee;
+            total = totalTuition + totalInstFee + totalSAFee;
+            document.getElementById('tuition').value = dollar.format(totalTuition);
+            document.getElementById('instFee').value = dollar.format(totalInstFee);
+            document.getElementById('SAfee').value = dollar.format(totalSAFee);
+            document.getElementById('total').value = dollar.format(total);
+        }
+    </script>
+    <style>
+        body
+        {
+            background-color: #117cad;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        h2
+        {
+            text-align: center;
+        }
+        table
+        {
+            width: 80%;
+            color: bisque;
+            background-color: #683e8a;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+        td
+        {
+            text-align: right;
+            padding: 10px;
+        }
+        input
+        {
+            width: 150px;
+            font-weight: bold;
+        }
+        input, select
+        {
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr><td colspan="2"><h2>PVCC TUITION AND FEES CALCULATOR</h2></td></tr>
+            <tr>
+                <td>Number of credits:</td>
+                <td><input type="text" id="credits" placeholder="credits here" /></td>
+            </tr>
+            <tr>
+                <td><input type="reset"></td>
+                <td style="text-align: center;">
+                <input type="button" value="Click here to calculate tuition and fees" class="button" onclick="calcTui()" />
+                </td>
+            </tr>
+            <tr style="font-weight: bold; font-size: 1.2em; text-align: left;">
+                <td>Tuition:</td>
+                <td><input type="text" id="tuition" placeholder="0" /></td>
+            </tr>
+            <tr style="font-weight: bold; font-size: 1.2em; text-align: left;">
+                <td>Institutional Fee:</td>
+                <td><input type="text" id="instFee" placeholder="0" /></td>
+            </tr>
+            <tr style="font-weight: bold; font-size: 1.2em; text-align: left;">
+                <td>Student activity fee:</td>
+                <td><input type="text" id="SAfee" placeholder="0" /></td>
+            </tr>
+            <tr style="font-weight: bold; font-size: 1.2em; text-align: left;">
+                <td>Total:</td>
+                <td><input type="text" id="total" placeholder="0" /></td>
+            </tr>
+        </table>
+</div>
+</body>
+</html>
